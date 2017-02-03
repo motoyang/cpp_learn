@@ -11,9 +11,12 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    std::cout << "Hello, World!\n";
+    std::cout << "Hello, cpp14.\n";
     
-    bind_learn();
+//    bind_learn();
+    function_learn();
+    
+    std::cout << "This is end." << std::endl;
     
     return 0;
 }

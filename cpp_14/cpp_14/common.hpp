@@ -10,5 +10,6 @@
 #define common_hpp
 
 int bind_learn();
+int function_learn();
 
 #endif /* common_hpp */

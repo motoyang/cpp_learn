@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1960C5E61E44B9F100CEA72D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1960C5E51E44B9F100CEA72D /* main.cpp */; };
 		1960C5EE1E44BA5900CEA72D /* bind.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1960C5EC1E44BA5900CEA72D /* bind.cpp */; };
+		1960C5F11E44D00F00CEA72D /* function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1960C5F01E44D00F00CEA72D /* function.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,7 @@
 		1960C5E51E44B9F100CEA72D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1960C5EC1E44BA5900CEA72D /* bind.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bind.cpp; sourceTree = "<group>"; };
 		1960C5EF1E44BEE800CEA72D /* common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = common.hpp; sourceTree = "<group>"; };
+		1960C5F01E44D00F00CEA72D /* function.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = function.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1960C5EF1E44BEE800CEA72D /* common.hpp */,
 				1960C5E51E44B9F100CEA72D /* main.cpp */,
 				1960C5EC1E44BA5900CEA72D /* bind.cpp */,
+				1960C5F01E44D00F00CEA72D /* function.cpp */,
 			);
 			path = cpp_14;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			files = (
 				1960C5EE1E44BA5900CEA72D /* bind.cpp in Sources */,
 				1960C5E61E44B9F100CEA72D /* main.cpp in Sources */,
+				1960C5F11E44D00F00CEA72D /* function.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
