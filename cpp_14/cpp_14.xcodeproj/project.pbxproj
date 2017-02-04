@@ -10,6 +10,12 @@
 		1960C5E61E44B9F100CEA72D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1960C5E51E44B9F100CEA72D /* main.cpp */; };
 		1960C5EE1E44BA5900CEA72D /* bind.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1960C5EC1E44BA5900CEA72D /* bind.cpp */; };
 		1960C5F11E44D00F00CEA72D /* function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1960C5F01E44D00F00CEA72D /* function.cpp */; };
+		19CC01DD1E45796300EBEC38 /* keyword_for.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19CC01DC1E45796300EBEC38 /* keyword_for.cpp */; };
+		19CC01DF1E457B8900EBEC38 /* variadic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19CC01DE1E457B8900EBEC38 /* variadic.cpp */; };
+		19CC01E11E457CE500EBEC38 /* tuple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19CC01E01E457CE500EBEC38 /* tuple.cpp */; };
+		19CC01E31E457E7800EBEC38 /* move_if_noexcept.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19CC01E21E457E7800EBEC38 /* move_if_noexcept.cpp */; };
+		19CC01E51E4589C100EBEC38 /* reference.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19CC01E41E4589C100EBEC38 /* reference.cpp */; };
+		19CC01E71E458FAE00EBEC38 /* forward.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19CC01E61E458FAE00EBEC38 /* forward.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +36,12 @@
 		1960C5EC1E44BA5900CEA72D /* bind.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bind.cpp; sourceTree = "<group>"; };
 		1960C5EF1E44BEE800CEA72D /* common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = common.hpp; sourceTree = "<group>"; };
 		1960C5F01E44D00F00CEA72D /* function.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = function.cpp; sourceTree = "<group>"; };
+		19CC01DC1E45796300EBEC38 /* keyword_for.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = keyword_for.cpp; sourceTree = "<group>"; };
+		19CC01DE1E457B8900EBEC38 /* variadic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = variadic.cpp; sourceTree = "<group>"; };
+		19CC01E01E457CE500EBEC38 /* tuple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tuple.cpp; sourceTree = "<group>"; };
+		19CC01E21E457E7800EBEC38 /* move_if_noexcept.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = move_if_noexcept.cpp; sourceTree = "<group>"; };
+		19CC01E41E4589C100EBEC38 /* reference.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = reference.cpp; sourceTree = "<group>"; };
+		19CC01E61E458FAE00EBEC38 /* forward.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = forward.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,12 @@
 				1960C5E51E44B9F100CEA72D /* main.cpp */,
 				1960C5EC1E44BA5900CEA72D /* bind.cpp */,
 				1960C5F01E44D00F00CEA72D /* function.cpp */,
+				19CC01DC1E45796300EBEC38 /* keyword_for.cpp */,
+				19CC01DE1E457B8900EBEC38 /* variadic.cpp */,
+				19CC01E01E457CE500EBEC38 /* tuple.cpp */,
+				19CC01E21E457E7800EBEC38 /* move_if_noexcept.cpp */,
+				19CC01E41E4589C100EBEC38 /* reference.cpp */,
+				19CC01E61E458FAE00EBEC38 /* forward.cpp */,
 			);
 			path = cpp_14;
 			sourceTree = "<group>";
@@ -129,7 +147,13 @@
 			files = (
 				1960C5EE1E44BA5900CEA72D /* bind.cpp in Sources */,
 				1960C5E61E44B9F100CEA72D /* main.cpp in Sources */,
+				19CC01E11E457CE500EBEC38 /* tuple.cpp in Sources */,
+				19CC01DF1E457B8900EBEC38 /* variadic.cpp in Sources */,
 				1960C5F11E44D00F00CEA72D /* function.cpp in Sources */,
+				19CC01E51E4589C100EBEC38 /* reference.cpp in Sources */,
+				19CC01E71E458FAE00EBEC38 /* forward.cpp in Sources */,
+				19CC01DD1E45796300EBEC38 /* keyword_for.cpp in Sources */,
+				19CC01E31E457E7800EBEC38 /* move_if_noexcept.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

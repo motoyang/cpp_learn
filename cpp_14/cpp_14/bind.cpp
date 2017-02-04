@@ -25,11 +25,13 @@ int bind_1()
 {
     auto bindFunc1 = bind(TestFunc, std::placeholders::_1, 'A', 100.1);
     bindFunc1(10);
+    bindFunc1(1, 2, 3, 4, 5);
     
     cout << "=================================\n";
     
     auto bindFunc2 = bind(TestFunc, std::placeholders::_2, std::placeholders::_1, 100.1);
     bindFunc2('B', 10);
+    bindFunc2(1, 2, 3, 4, 5);
     
     cout << "=================================\n";
     

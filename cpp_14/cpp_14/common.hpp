@@ -9,7 +9,17 @@
 #ifndef common_hpp
 #define common_hpp
 
+// Keywords learn
+int for_learn();
+
+// Misc learn
+int variadic_learn();
+
+// Utilities learn
 int bind_learn();
 int function_learn();
+int tuple_learn();
+int move_if_noexcept_learn();
+int forward_learn();
 
 #endif /* common_hpp */
