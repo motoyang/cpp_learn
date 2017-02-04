@@ -12,7 +12,8 @@
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, cpp14.\n";
-    
+  
+    file_in_dir();
 //    for_learn();
 //    variadic_learn();
 //    lambda_learn();
@@ -24,7 +25,7 @@ int main(int argc, const char * argv[]) {
     
 //    random_learn();
     
-    bind_learn();
+//    bind_learn();
 //    function_learn();
 //    tuple_learn();
 //    move_if_noexcept_learn();

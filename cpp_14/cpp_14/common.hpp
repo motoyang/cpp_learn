@@ -9,6 +9,9 @@
 #ifndef common_hpp
 #define common_hpp
 
+// file system
+int file_in_dir();
+
 // Keywords learn
 int for_learn();
 
