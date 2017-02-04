@@ -28,15 +28,19 @@ int for_learn() {
         std::cout << n << ' ';
     std::cout << '\n';
     
-    int a[] = {0, 1, 2, 3, 4, 5};
+    int a[] = {10, 11, 12, 13, 14, 15};
     for (int n : a) // the initializer may be an array
-        std::cout << n << ' ';
+        std::cout << ++n << ' ';
     std::cout << '\n';
     
-    for (int n : a)
-        std::cout << 1 << ' ' << n; // the loop variable need not be used
+    for (auto&& n : a)
+        std::cout << ++n << ' '; // the loop variable need not be used
     std::cout << '\n';
     
+    for (auto n : a)
+        std::cout << n << ' '; // the loop variable need not be used
+    std::cout << '\n';
+
     return 0;
 }
 
@@ -46,6 +50,7 @@ int for_learn() {
  0 1 2 3 4 5
  0 1 2 3 4 5
  0 1 2 3 4 5
- 0 1 2 3 4 5
- 1 1 1 1 1 1
+ 11 12 13 14 15 16
+ 11 12 13 14 15 16
+ 11 12 13 14 15 16
 */

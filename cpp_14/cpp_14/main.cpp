@@ -15,14 +15,14 @@ int main(int argc, const char * argv[]) {
     
 //    for_learn();
 //    variadic_learn();
-   
+//    lambda_learn();
 //    array_learn();
 //    priority_queue_learn();
     
 //    for_each_learn();
 //    shuffle_learn();
     
-    random_learn();
+//    random_learn();
     
 //    bind_learn();
 //    function_learn();
@@ -31,6 +31,9 @@ int main(int argc, const char * argv[]) {
 //    forward_learn();
 //    reference_wrapper_learn();
     
+    unique_learn();
+    share_ptr_learn();
+
     std::cout << "This is end." << std::endl;
     
     return 0;

@@ -14,6 +14,7 @@ int for_learn();
 
 // Misc learn
 int variadic_learn();
+int lambda_learn();
 
 // Containers library learn
 int array_learn();
@@ -33,5 +34,9 @@ int tuple_learn();
 int move_if_noexcept_learn();
 int forward_learn();
 int reference_wrapper_learn();
+
+// Memory management learn
+int unique_learn();
+int share_ptr_learn();
 
 #endif /* common_hpp */
