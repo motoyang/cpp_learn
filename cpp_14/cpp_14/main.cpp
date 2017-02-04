@@ -24,15 +24,15 @@ int main(int argc, const char * argv[]) {
     
 //    random_learn();
     
-//    bind_learn();
+    bind_learn();
 //    function_learn();
 //    tuple_learn();
 //    move_if_noexcept_learn();
 //    forward_learn();
 //    reference_wrapper_learn();
     
-    unique_learn();
-    share_ptr_learn();
+//    unique_learn();
+//    share_ptr_learn();
 
     std::cout << "This is end." << std::endl;
     

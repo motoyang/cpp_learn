@@ -25,15 +25,13 @@ int bind_1()
 {
     auto bindFunc1 = bind(TestFunc, std::placeholders::_1, 'A', 100.1);
     bindFunc1(10);
-    bindFunc1(1, 2, 3, 4, 5);
     
-    cout << "=================================\n";
+    cout << "\n";
     
     auto bindFunc2 = bind(TestFunc, std::placeholders::_2, std::placeholders::_1, 100.1);
     bindFunc2('B', 10);
-    bindFunc2(1, 2, 3, 4, 5);
     
-    cout << "=================================\n";
+    cout << "\n";
     
     auto bindFunc3 = bind(TestFunc, std::placeholders::_2, std::placeholders::_3, std::placeholders::_1);
     bindFunc3(100.1, 30, 'C');
@@ -101,16 +99,6 @@ int bind_3()
     return 0;
 }
 
-int bind_learn()
-{
-    bind_1();
-    bind_2();
-    bind_3();
-    
-    return 0;
-}
-
-
 /*
  以下是使用std::bind的一些需要注意的地方：
  
@@ -120,3 +108,132 @@ int bind_learn()
  对于绑定的指针、引用类型的参数，使用者需要保证在可调用实体调用之前，这些参数是可用的；
  类的this可以通过对象或者指针来绑定。
 */
+
+char my_toupper(char c)
+{
+    locale loc;
+    return std::use_facet<std::ctype<char> >(loc).toupper(c);
+}
+
+int bind_4()
+{
+    string s("Internationalization");
+    string sub("Nation");
+    
+    string::iterator pos;
+    pos = search(s.begin(), s.end(), sub.begin(), sub.end(), bind(equal_to<char>(), bind(my_toupper,placeholders::_1), bind(my_toupper, placeholders::_2)));
+    if (pos != s.end())
+    {
+        cout << "\"" << sub << "\" is part of\"" << s << "\""
+        << endl;
+    }
+    
+    return 0;
+}
+
+int bind_lambda_1()
+{
+    string s("Internationalizition");
+    string sub("Nation");
+    
+    string::iterator pos;
+    pos = search(s.begin(), s.end(),
+                 sub.begin(), sub.end(),
+                 [](char c1, char c2){
+                     return my_toupper(c1) == my_toupper(c2);
+                 }
+                 );
+    
+    if (pos != s.end())
+    {
+        cout << sub << " is part of " << s << endl;
+    }
+    
+    return 0;
+}
+
+class Person
+{
+private:
+    string name_;
+public:
+    Person(const string& n)
+    : name_(n)
+    {}
+    
+    void print() const
+    {
+        cout << name_ << endl;
+    }
+    
+    void print2(const string& prefix) const
+    {
+        cout << prefix << name_ << endl;
+    }
+};
+
+int bind_5()
+{
+    vector<Person> coll =
+    {
+        Person("csu"),
+        Person("csru"),
+        Person("csiu")
+    };
+    
+    //每个person对象调用成员函数
+    for_each(coll.begin(), coll.end(), bind(&Person::print, placeholders::_1));
+    cout << endl;
+    
+    for_each(coll.begin(), coll.end(), bind(&Person::print2, placeholders::_1, "Person: "));
+    cout << endl;
+    
+    bind(&Person::print2, placeholders::_1, "This is : ")(Person("铁道学院"));
+    
+    return 0;
+}
+
+static int lambda_2()
+{
+    vector<Person> coll =
+    {
+        Person("csu"),
+        Person("csru"),
+        Person("csiu")
+    };
+    
+    for_each(coll.begin(), coll.end(),
+             [](const Person& p){
+                 p.print();
+             });
+    cout << endl;
+    
+    for_each(coll.begin(), coll.end(),
+             [](const Person& p){
+                 p.print2("Person: ");
+             });
+    
+    return 0;
+}
+
+int bind_learn()
+{
+    cout << "bind_1------------------------" << endl;
+    bind_1();
+    cout << "bind_2------------------------" << endl;
+    bind_2();
+    cout << "bind_3------------------------" << endl;
+    bind_3();
+
+    cout << "bind_4------------------------" << endl;
+    bind_4();
+    cout << "bind_lambda_1------------------------" << endl;
+    bind_lambda_1();
+    
+    cout << "bind_5------------------------" << endl;
+    bind_5();
+    cout << "bind_lambda_2------------------------" << endl;
+    lambda_2();
+
+    return 0;
+}
